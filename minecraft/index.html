@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Minecraft Klon</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#000;font-family:sans-serif}
+  #cross{position:fixed;left:50%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;pointer-events:none}
+  #cross:before,#cross:after{content:"";position:absolute;background:#fff;mix-blend-mode:difference}
+  #cross:before{left:9px;top:0;width:2px;height:20px}
+  #cross:after{top:9px;left:0;height:2px;width:20px}
+  #hotbar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:4px}
+  .slot{width:60px;height:52px;border:3px solid #444;color:#fff;font-size:12px;display:flex;align-items:flex-end;justify-content:center;text-shadow:1px 1px 2px #000}
+  .slot.sel{border-color:#fff}
+  #info{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;background:#000a;text-align:center;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="cross"></div>
+<div id="hotbar"></div>
+<div id="info"><h1>Minecraft Klon</h1>
+<p>Klicken zum Starten<br>WASD = laufen · Leertaste = springen (2x = Fliegen an/aus) · Shift = runter beim Fliegen<br>
+Linksklick = abbauen · Rechtsklick = platzieren · 1–6 / Mausrad = Block wählen</p></div>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>
